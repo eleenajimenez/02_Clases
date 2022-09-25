@@ -8,6 +8,7 @@ internal class Program
         int opcion;
         bool valido;
         Biblioteca b= new Biblioteca();
+        ManejarFechas mf = new ManejarFechas();
 
 
         do
@@ -29,7 +30,7 @@ internal class Program
             {
                 case 1:
                     Console.WriteLine("Ha elegido manejar fechas.");
-                    //manejarFechas();
+                    mf.menu();
                     break;
                 case 2:
                     Console.WriteLine("Ha elegido clase libros.");
