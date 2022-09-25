@@ -8,47 +8,49 @@ namespace _02_Clases
 {
     public class Libro
     {
-        string str_titulo;
-        string str_autor;
-        string str_estilo;
-        string str_editorial;
+        private String titulo;
+        private String autor;
+        private String estilo;
+        private String editorial;
+
+        public Libro(string titulo, string autor, string estilo, string editorial)
+        {
+            Titulo = titulo;
+            Autor = autor;
+            Estilo = estilo;
+            Editorial = editorial;
+        }
 
         public string Titulo
         {
-            get { return str_titulo; }
-            set { str_titulo = value; }
+            get { return titulo; }
+            set { titulo = value; }
         }
 
         public string Autor
         {
-            get { return str_autor; }
-            set { str_autor = value; }
+            get { return autor; }
+            set { autor = value; }
         }
 
         public string Estilo
         {
-            get { return str_estilo; }
-            set { str_estilo = value; }
+            get { return estilo; }
+            set { estilo = value; }
         }
 
         public string Editorial
         {
-            get { return str_editorial; }
-            set { str_editorial = value; }
+            get { return editorial; }
+            set { editorial = value; }
         }
 
 
-        public Libro(string titulo, string autor, string estilo, string editorial)
-        {
-            this.str_titulo = titulo;
-            this.str_autor = autor;
-            this.str_estilo = estilo;
-            this.str_editorial = editorial;
-        }
+        
 
         public override string ToString()
         {
-            return base.ToString(); 
+            return string.Format("Titulo: " + this.titulo + "\t Autor: " + this.autor + "\t Estilo: " + this.estilo + "\t Editorial: " + this.editorial);
         }
 
         

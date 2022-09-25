@@ -5,46 +5,46 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        
-        bool salir = false;
-        int opcion = 0;
+        int opcion;
+        bool valido;
         Biblioteca b= new Biblioteca();
 
 
-        while (!salir)
+        do
         {
-            Console.WriteLine("¿Qué ejercicio quieres ejecutar?: \n" +
+            do
+            {
+                Console.WriteLine("¿Qué ejercicio quieres ejecutar?: \n" +
 
                 "1. Manejar fechas. \n" +
                 "2. Clase libros. \n" +
                 "3. Alquiler puerto. \n" +
                 "4. Salir.");
-            opcion = Console.Read();
+                valido = int.TryParse(Console.ReadLine(), out opcion);
+                if(opcion >= 5) valido = false;
+                if (!valido) Console.WriteLine("Introduzca una opcion valida");
+            }while(!valido);
+            Console.WriteLine("\n");
             switch (opcion)
             {
                 case 1:
+                    Console.WriteLine("Ha elegido manejar fechas.");
                     //manejarFechas();
                     break;
                 case 2:
-                    claseLibros(b);
+                    Console.WriteLine("Ha elegido clase libros.");
+                    //claseLibros(b);
                     break;
                 case 3:
+                    Console.WriteLine("Ha elegido alquiler puerto.");
                     //alquilerPuerto();
                     break;
                 case 4:
-                    salir = true;
+                    Console.WriteLine("Hasta pronto!");
                     break;
             }
+        }while(opcion!=4);
 
-
-        }
-
-    }
-
-    private static void claseLibros(Biblioteca b)
-    {
-        b.insertarLibros();
-        b.mostrarLibros();
     }
 
 
