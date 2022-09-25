@@ -56,7 +56,7 @@ namespace _02_Clases.AlquilerPuerto
         public string Pos_amarre 
         {
             get { return pos_amarre; }
-            set { pos_amarre = value }
+            set { pos_amarre = value; }
         }
 
         public Barco Barco 

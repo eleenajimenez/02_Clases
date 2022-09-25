@@ -8,7 +8,6 @@ namespace _02_Clases.AlquilerPuerto
 {
     class Puerto
     {
-        Alquiler alquiler;
         public void funcionamiento()
         {
             Velero velero = new Velero(2, "1", 2020, 10);
@@ -18,8 +17,8 @@ namespace _02_Clases.AlquilerPuerto
             Console.ReadKey();
             Console.WriteLine("\n\n");
 
-            EmbarcacionDeportiva embarcacionDeportiva = new EmbarcacionDeportiva(100, "2", 1999, 12);
-            Alquiler alquiler2 = new Alquiler("Elena Jiménez", "05722540W", new DateTime(2022, 09, 15), new DateTime(2022, 10, 2), "posicion", embarcacionDeportiva);
+            EmbDeportiva embDeportiva = new EmbDeportiva(100, "2", 1999, 12);
+            Alquiler alquiler2 = new Alquiler("Elena Jiménez", "05722540W", new DateTime(2022, 09, 15), new DateTime(2022, 10, 2), "posicion", embDeportiva);
             Console.WriteLine(alquiler2);
             Console.WriteLine("Presione una tecla para continuar. ");
             Console.ReadKey();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02_Clases.AlquilerPuerto
 {
-    class Yate : EmbarcacionDeportiva
+    class Yate : EmbDeportiva
     {
         private int camarotes;
 

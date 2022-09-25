@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02_Clases.AlquilerPuerto
 {
-    class EmbarcacionDeportiva : Barco
+    class EmbDeportiva : Barco
     {
         private int potencia;
 
@@ -16,7 +16,7 @@ namespace _02_Clases.AlquilerPuerto
             set { potencia = value; }
         }
 
-        public EmbarcacionDeportiva(int potencia, string matricula, int fabricacion, int eslora) : base(matricula, eslora, fabricacion)
+        public EmbDeportiva(int potencia, string matricula, int fabricacion, int eslora) : base(matricula, eslora, fabricacion)
         {
             this.Matricula = matricula;
             this.Fabricacion = fabricacion;

@@ -1,5 +1,6 @@
 ﻿
 using _02_Clases;
+using _02_Clases.AlquilerPuerto;
 
 internal class Program
 {
@@ -9,6 +10,7 @@ internal class Program
         bool valido;
         Biblioteca b= new Biblioteca();
         ManejarFechas mf = new ManejarFechas();
+        Puerto p = new Puerto();
 
 
         do
@@ -38,7 +40,7 @@ internal class Program
                     break;
                 case 3:
                     Console.WriteLine("Ha elegido alquiler puerto.");
-                    //alquilerPuerto();
+                    p.funcionamiento();
                     break;
                 case 4:
                     Console.WriteLine("Hasta pronto!");
