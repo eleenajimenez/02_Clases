@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02_Clases
 {
-    internal class ManejarFechas
+    class ManejarFechas
     {
     }
 }
