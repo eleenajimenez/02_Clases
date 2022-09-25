@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02_Clases
+namespace _02_Clases.ClaseLibros
 {
     class Biblioteca
     {
@@ -14,7 +14,7 @@ namespace _02_Clases
         ArrayList libros = new ArrayList();
         bool valido;
         int opcion;
-        String titulo, autor, estilo, editorial;
+        string titulo, autor, estilo, editorial;
 
         public void menu()
         {
@@ -64,7 +64,7 @@ namespace _02_Clases
 
         public string pedirTeclado()
         {
-            String texto;
+            string texto;
             texto = Console.ReadLine();
             return texto;
         }
@@ -79,12 +79,12 @@ namespace _02_Clases
             estilo = pedirTeclado();
             Console.WriteLine("Editorial: ");
             editorial = pedirTeclado();
-            l= new Libro(titulo,autor,estilo,editorial);
+            l = new Libro(titulo, autor, estilo, editorial);
             libros.Add(l);
             return l;
         }
 
-        
+
 
         public void mostrarLibros()
         {
@@ -102,30 +102,30 @@ namespace _02_Clases
             int numero;
             do
             {
-                valido= int.TryParse(Console.ReadLine(), out numero);
+                valido = int.TryParse(Console.ReadLine(), out numero);
                 if (numero > libros.Count - 1) valido = false;
                 if (!valido) Console.WriteLine("");
-            }while (!valido);
-            Libro l1= insertarLibros();
+            } while (!valido);
+            Libro l1 = insertarLibros();
             libros[numero] = l1;
-            
+
 
         }
 
         public void eliminarLibro()
         {
             mostrarLibros();
-            Console.WriteLine("Elige el libro que quieres eliminar:" );
+            Console.WriteLine("Elige el libro que quieres eliminar:");
             int numero;
-            valido= int.TryParse(Console.ReadLine(), out numero);
-            for(int i = 0; i < libros.Count; i++)
+            valido = int.TryParse(Console.ReadLine(), out numero);
+            for (int i = 0; i < libros.Count; i++)
             {
                 if (i == numero)
                 {
                     libros.RemoveAt(numero);
                     Console.WriteLine("Libro eliminado con exito.");
                 }
-                
+
             }
 
         }

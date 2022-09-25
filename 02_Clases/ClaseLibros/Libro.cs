@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02_Clases
+namespace _02_Clases.ClaseLibros
 {
     public class Libro
     {
-        private String titulo;
-        private String autor;
-        private String estilo;
-        private String editorial;
+        private string titulo;
+        private string autor;
+        private string estilo;
+        private string editorial;
 
         public Libro(string titulo, string autor, string estilo, string editorial)
         {
@@ -46,14 +46,14 @@ namespace _02_Clases
         }
 
 
-        
+
 
         public override string ToString()
         {
-            return string.Format("Titulo: " + this.titulo + "\t Autor: " + this.autor + "\t Estilo: " + this.estilo + "\t Editorial: " + this.editorial);
+            return string.Format("Titulo: " + titulo + "\t Autor: " + autor + "\t Estilo: " + estilo + "\t Editorial: " + editorial);
         }
 
-        
+
 
     }
 }
